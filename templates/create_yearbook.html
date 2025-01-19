@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Yearbook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .template-preview {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .template-preview img {
+            width: 150px;
+            height: 200px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .template-preview img:hover {
+            transform: scale(1.05);
+            border-color: #0078d4;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0056a3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Your Yearbook</h1>
+    <div class="form-container">
+        <form action="/create_yearbook" method="post" enctype="multipart/form-data">
+            <!-- Template Selection -->
+            <div class="form-group">
+                <label for="template">Choose a Template:</label>
+                <div class="template-preview">
+                    <label>
+                        <input type="radio" name="template" value="template1" required>
+                        <img src="template1.png" alt="Template 1">
+                    </label>
+                    <label>
+                        <input type="radio" name="template" value="template2">
+                        <img src="template2.png" alt="Template 2">
+                    </label>
+                </div>
+            </div>
+
+            <!-- Monthly Input -->
+            <div class="form-group">
+                <label for="photos">Upload Photos for Each Month:</label>
+                <input type="file" name="photos[]" accept="image/*" multiple required>
+            </div>
+
+            <div class="form-group">
+                <label for="monthly-text">Enter Monthly Highlights:</label>
+                <textarea name="monthly_text" rows="5" placeholder="Write your highlights for the year, separated by months (e.g., January: ...)."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Create Yearbook</button>
+        </form>
+    </div>
+</body>
+</html>

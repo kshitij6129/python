@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Finds</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(white 0%, #3ed8fa 100%);
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            padding: 0 20px;
+            top: 0;
+            width: 97.5%;
+        }
+        .navbar img.logo {
+            height: 55px;
+            width: 55px;
+        }
+        .navbar-nav {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown .dropbutton {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 8px;
+            cursor: pointer;
+        }
+        .navbar a:hover, .dropdown:hover .dropbutton {
+            background-color: lightgrey;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #268add;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .auth-buttons {
+            position: absolute;
+            bottom: 24%;
+            left: 80%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+        .auth-buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px 85px; 
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+        .auth-buttons a:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .logo-text {
+            font-size: 25px;
+            font-weight: bold;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .home_image {
+            position: relative;
+        }
+        
+        .home_text {
+            position: absolute;
+            bottom: 340px;
+            right: 50px;
+            color: white;
+            font-size: 50px;
+            padding: 10px;
+            font-stretch: bold;
+        
+        }
+        .home_text1 {
+            position: absolute;
+            bottom: 290px;
+            right: 60px;
+            color: white;
+            font-size: 32px;
+            padding: 10px;
+        
+        }
+        .home_text2 {
+            position: absolute;
+            bottom: 260px;
+            right: 60px;
+            color: white;
+            font-size: 32px;
+            padding: 10px;
+        
+        }
+        .auth-buttons1 {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        .auth-buttons1 a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .auth-buttons1 a:hover {
+            background-color: lightgrey;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="https://png.pngtree.com/png-vector/20220910/ourlarge/pngtree-shopping-cart-pin-map-icon-displayed-on-computer-screen-vector-png-image_28172812.jpg" class="logo">
+</head>
+<body>
+    
+<div class="navbar">
+    <img class="logo" loading="lazy" src="https://png.pngtree.com/png-vector/20220910/ourlarge/pngtree-shopping-cart-pin-map-icon-displayed-on-computer-screen-vector-png-image_28172812.jpg" width="35">
+    <div class="logo-text">Local Finds</div>
+
+<!-- nav bar more buttons-->
+
+    <div class="auth-buttons1">
+        <a href="http://127.0.0.1:5000">Sign In</a>
+        <a href="login.html">Login</a>
+    </div>
+</div>
+
+<div class="home_image">
+    <img src="https://img.freepik.com/free-vector/dark-wavy-colors-background_23-2148403785.jpg" alt="Fitness Tracker" width="1520" height="650">
+    <div class="home_text"><b>LOCAL FINDS</b></div>
+    <div class="home_text1"><b>Your local shops</b></div>
+    <div class="home_text2"><b>Just a click away </b></div>
+    <div class="auth-buttons">
+        <a href="sign_in.html">Sign_in</a>
+        <a href="login.html">Login</a>
+    </div>
+</div>
+
+
+</body>
+</html>
